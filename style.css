@@ -7,12 +7,27 @@ body{
     background-color: #939185;
 }
 #heading{
-    /* background-color: black; */
+    background-color: #2F3645;
+    color: #F7E7DC;
+    font-size: 7vmin;
     padding-top: 1vh;
+    width: 100vw;
     padding-bottom: 1vh;
-    color: black;
-    margin-top: 3vmin;
+    /* color: black; */
+    /* margin-top: 3vmin; */
 }
+#boxx{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+/* #change{ 
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+justify-content: flex-end;
+} */
 .game{
     
     height: 65vmin;
@@ -47,8 +62,9 @@ body{
 #reset,#new{
     padding: 2vmin;
     margin-top: 3vmin;
-    background-color: #191913;
+    background-color: #45474B;
     color: #fff;
+    cursor: pointer;
     
     border: none;
     border-radius: 3vmin
@@ -57,9 +73,8 @@ body{
 #vs{
     padding: 2vmin;
     margin-top: 3vmin;
-    background-color: #191913;
+    background-color: #45474B;
     color: #fff;
-    
     border: none;
     border-radius: 3vmin
 }

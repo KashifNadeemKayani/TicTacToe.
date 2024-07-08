@@ -232,6 +232,10 @@ const resetGame = () => {
     reset.disabled = false;
     if (!vsHuman) {
         chooseFirstTurn();
+        enableEmptyBoxes();
+    }
+    else{
+        enableEmptyBoxes();
     }
 };
 
@@ -326,7 +330,7 @@ const computerMove = () => {
     let newBoard = Array.from(boxes).map((box, i) => box.innerText === "" ? i : box.innerText);
     let bestSpot = minimax(newBoard, "O").index;
     boxes[bestSpot].innerText = "O";
-    boxes[bestSpot].style.color = "blue";
+    boxes[bestSpot].style.color = "red";
     boxes[bestSpot].disabled = true;
     count++;
     newBoard[bestSpot] = "O"; // Update the board with the computer's move
@@ -376,7 +380,7 @@ boxes.forEach((box, index) => {
             } else {
                 if (turnX) {
                     box.innerText = "X";
-                    box.style.color = "red";
+                    box.style.color = "blue";
                     box.disabled = true;
                     count++;
                     let currentBoard = Array.from(boxes).map(box => box.innerText);
@@ -394,7 +398,6 @@ boxes.forEach((box, index) => {
     });
 });
 
-// Initially choose the turn if playing against computer
 if (!vsHuman) {
     chooseFirstTurn();
     
